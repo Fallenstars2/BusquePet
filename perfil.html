@@ -6,132 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário</title>
     <style>
-        /* body {
-            font-family: Arial, sans-serif;
-            background-color: #e0f7fa;
-            margin: 0;
-            padding: 0;
-        }
-
-        .profile-container {
-            max-width: 800px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .profile-header {
-            background: linear-gradient(135deg, #1e88e5, #42a5f5);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .profile-header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        .profile-content {
-            padding: 30px;
-        }
-
-        .profile-picture {
-            float: right;
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            margin-right: 30px;
-            border: 5px solid #1e88e5;
-        }
-
-        .profileInfo {
-            overflow: hidden;
-        }
-
-        .profileInfo label {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-            color: #1e88e5;
-        }
-
-        .profileInfo h4 {
-            margin: 5px 0;
-            color: #555;
-            font-size: 1.1em;
-        }
-
-        .edit-form {
-            display: none;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .edit-form label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .edit-form input {
-            width: calc(100% - 20px);
-            padding: 8px;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-
-        .edit-form button {
-            background-color: #1e88e5;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .edit-form button:hover {
-            background-color: #0d47a1;
-        }
-
-        button {
-            background-color: rgb(255, 255, 255);
-            border-style: solid;
-            font-weight: bold;
-            border-color: rgb(0, 0, 0);
-            border-radius: 6px;
-            padding: 5px;
-            margin-top: 10px;
-        }
-
-        .voltar {
-            background-color: #080707;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .voltar:hover {
-            background-color: #464343;
-        } */
+      
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #030303;
+            background-image: url('profilebackground.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100dvh; 
+            backdrop-filter: blur(5px);
+
+
+
             margin: 0;
             padding: 0;
-            /* filter: sepia(80%); */
+           
             justify-content: center;
             align-items: center;
-            /* background-image: url('background1.jpg'); */
+            
             
             
         }
@@ -146,18 +38,18 @@
 
         input:hover {
     
-            box-shadow: 0 0 1em rgb(255, 255, 255);
+            box-shadow: 0 0 8px rgb(255, 255, 255);
         }
 
 
         .profile-container {
             max-width: 800px;
             margin: 40px auto;
-            background-color: #0c0c0c;
+            background-color: #ffffff;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             border-radius: 20px;
             overflow: hidden;
-            filter: sepia(40%);
+            
         }
 
         .profile-header {
@@ -185,7 +77,7 @@
             display: block;
             margin-top: 10px;
             font-weight: bold;
-            color: #c2c2c2;
+            color: #000000;
         }
 
         .profileInfo h4 {
@@ -209,6 +101,7 @@
             display: block;
             margin-bottom: 10px;
             font-weight: bold;
+            color: white;
         }
 
         .edit-form input {
@@ -229,20 +122,19 @@
         }
 
         .edit-form button:hover {
-            background-color: #464343;
+            background-color: #ffffff;
             color: black;
             border-color: black;
-            
         }
 
         button {
-            background-color: #080707;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 6px;
             cursor: pointer;
-            margin-top: 10px;
+            border-style: double;
+            border-color: white;
+            background-color: black;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+   
           
         }
 
@@ -256,10 +148,14 @@
         }
 
 
-        button:hover {
-        background-color: #464343;
-        color: black;
-        border-color: black;
+        button:hover { 
+            background-color: #ffffff;
+            color: black;
+            border: solid black 2px;
+           
+
+
+        
         }
 
         .voltar {
@@ -271,9 +167,12 @@
             cursor: pointer;
         }
 
-        .voltar:hover{
-            background-color: #464343;
+        .textdiv {
+            background-color: rgb(255, 255, 255);
+            margin-bottom: 1rem;
         }
+
+       
 
 
 
@@ -291,6 +190,10 @@
         <div class="profile-content">
             <!-- <img src="profile-picture.jpg" alt="Foto do Usuário" class="profile-picture"> -->
             <div class="profileInfo">
+
+
+            <div class="textdiv"> 
+
                 <label for="idadeLogado"><b>Data de Nascimento</b></label>
                 <h4 id="idadeLogado"></h4>
 
@@ -309,10 +212,16 @@
                 <label for="enderecoLogado">CEP:</label>
                 <h4 id="enderecoLogado"></h4>
 
+            </div>
+
                 <button class="voltar" onclick="voltar()">Voltar</button>
                 <button class="editarBotao" onclick="editarButton()">Editar Perfil</button>
 
                 <div class="edit-form" id="editForm">
+
+
+               
+
                     <label for="editNome">Nome:</label>
                     <input type="text" id="editNome">
                     <label for="editIdade">Data de Nascimento:</label>
@@ -327,6 +236,10 @@
                     <input type="number" id="editContato">
                     <label for="editEndereco">CEP:</label>
                     <input type="text" id="editEndereco">
+
+               
+
+
                     <button onclick="salvarAlteracoes(event)">Salvar</button>
                     <button onclick="editarButton()">Cancelar</button>
                 </div>
